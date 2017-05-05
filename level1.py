@@ -38,8 +38,7 @@ else:
                 else:
                     list_string[i] = chr(ord(list_string[i]) - difference)    
             before = after
-            print list_string 
-            print ""    
+            print list_string   
         else:
             flag = True
             before = line
