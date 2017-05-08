@@ -38,16 +38,15 @@ int lock[5] = {300};
 int main(int argc, char *argv[]) {
     
     char *string = "12345678";
-    int starting_size = 12;
+    int starting_size = 13;
     char *new_string = malloc(sizeof(char) * starting_size + 1);
     
     strcpy(new_string, string);
     
-    for (; starting_size < 15; starting_size++) {
+    for (; starting_size < 14; starting_size++) {
         brute_forcer(starting_size, new_string);
     }
     
-    printf("There are %d unique letters in %s\n", starting_size, string);
     printf("We can expect N permutations where N is (unique letters in the word)^size\n");
 
     return EXIT_SUCCESS;
@@ -73,6 +72,7 @@ void brute_forcer(int size, char *string) {
         element_pos[current_element]++;
         if (checkString(A)) {
             printf("The combination was %s\n", A);
+            break;
         }
         count++;
         if (A[current_element] == last_element) {
@@ -92,6 +92,7 @@ void brute_forcer(int size, char *string) {
             A[current_element] = string[element_pos[current_element]];
             if (checkString(A)) {
                 printf("The combination was %s\n", A);
+                break;
             }
         }
     }
