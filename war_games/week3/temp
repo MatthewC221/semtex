@@ -1,0 +1,5 @@
+1. Merkle: Super difficult, not sure how to do yet
+
+2. Diffie, pretty straight forward, kept sending wrong number 
+
+3. Over and under, interesting int overflow. I took a few attempts because I didn't write a program for it/calculate ir properly.
